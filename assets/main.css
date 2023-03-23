@@ -1,0 +1,388 @@
+:root {
+  --dark: #272a31;
+  --warn: #ec5242;
+  --light: #d3d3d3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+  list-style: none;
+  text-decoration: none;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+body {
+  background-color: #fefefe;
+}
+
+header {
+  border-bottom: 2px solid var(--light);
+}
+
+.list-close {
+  display: none;
+}
+
+.list-primary {
+  padding-left: calc(min(60px, 6%));
+}
+
+.section-primary {
+  background-image: url('./images/desktop/homebg.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+}
+
+.card-primary {
+  padding: calc(min(80px, 10%)) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.event-motto {
+  color: var(--warn);
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+.event-title {
+  color: var(--warn);
+  font-weight: 900;
+  text-transform: uppercase;
+  background-image: url('./images/clip-text.jpg');
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: center;
+  display: block;
+  background-size: cover;
+  padding-bottom: 20px;
+}
+
+.partner-section {
+  background-color: var(--dark);
+  margin-top: 40px;
+}
+
+.partner-head {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  color: var(--light);
+  text-align: center;
+}
+
+.partner-order {
+  filter: grayscale(1);
+  display: flex;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-advert {
+  padding: 0 calc(min(120px, 5%));
+  background-color: var(--dark);
+  text-align: end;
+}
+
+.order-advert {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.list-advert {
+  padding: 5px;
+}
+
+.link-advert {
+  font-size: 13px;
+  font-weight: 100;
+  color: white;
+  padding: 10px;
+}
+
+.image-advert {
+  max-width: 1.25rem;
+  max-height: 1.25rem;
+}
+
+.list-about {
+  color: var(--warn);
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .align-section {
+    padding: 0 calc(min(35px, 5%));
+  }
+
+  .navbar-primary {
+    background-color: var(--light);
+  }
+
+  .humberger-container {
+    padding-top: 0;
+  }
+
+  .humbergur-link {
+    display: block;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: #272a31;
+  }
+
+  .event-title {
+    font-size: 2.2rem;
+  }
+
+  .event-motto {
+    font-size: 20px;
+  }
+
+  .partner-list {
+    max-width: 200px;
+    height: auto;
+    padding: 10px;
+    width: 33.33%;
+    text-align: center;
+  }
+
+  .partner-logo {
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-section {
+    background-color: var(--light);
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
+  .footer-order {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-logo {
+    padding-right: 20px;
+    text-align: end;
+    width: 40%;
+  }
+
+  .footer-description {
+    text-align: left;
+    width: 60%;
+    padding-left: 30px;
+  }
+
+  .footer-logo-image {
+    width: 80px;
+    height: 60px;
+  }
+
+  .popup-menu > header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .popup-menu > header > .navbar-advert {
+    display: block;
+    order: 1;
+    padding: 10px;
+  }
+
+  .popup-menu > header .image-logo {
+    max-width: 8.66rem;
+    max-height: 3.75rem;
+    margin-top: 10px;
+    padding: 5px;
+  }
+
+  .popup-menu .navbar-primary #popup-closeid {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  .popup-menu > header > .navbar-primary {
+    order: -1;
+    display: block;
+    background-color: #fff;
+  }
+
+  .popup-menu > header > .navbar-primary > .order-logo {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px solid var(--warn);
+  }
+
+  .popup-menu > header > .navbar-primary #popup-closeid:hover {
+    background-color: #fff9ff;
+    opacity: 0.5;
+  }
+
+  .popup-menu > header .order-primary {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding-top: 20px;
+  }
+
+  .popup-menu .order-primary .link-primary {
+    font-size: 20px;
+    color: var(--dark);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+  }
+
+  .popup-menu .order-primary .link-primary:hover {
+    background-color: #fff9ff;
+  }
+
+  .popup-menu > main {
+    display: none;
+  }
+
+  .popup-menu > footer {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .align-section {
+    padding: 0 calc(min(100px, 5%));
+  }
+
+  .desktop-only {
+    display: block;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .navbar-primary {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .order-logo {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  .order-primary {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .image-logo {
+    max-width: 15.66rem;
+    max-height: 2.75rem;
+  }
+
+  .link-primary {
+    color: var(--dark);
+    padding: 8px;
+    margin: 2px;
+    font-weight: 100;
+  }
+
+  .link-about {
+    color: var(--warn);
+  }
+
+  .link-orgname {
+    border: 2px solid var(--warn);
+  }
+
+  .event-motto {
+    font-size: 25px;
+  }
+
+  .event-title {
+    font-size: 4.2rem;
+  }
+
+  .partner-list {
+    max-width: 200px;
+    height: auto;
+    padding: 10px;
+    width: 20%;
+    text-align: center;
+  }
+
+  .partner-logo {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-section {
+    background-color: var(--light);
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
+  .footer-order {
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .footer-logo {
+    text-align: end;
+    width: 40%;
+    line-height: 30px;
+    padding-right: 20px;
+  }
+
+  .footer-description {
+    text-align: left;
+    line-height: 30px;
+    width: 60%;
+    padding-left: 20px;
+  }
+
+  .footer-logo-image {
+    width: 100px;
+    height: 80px;
+  }
+}
