@@ -1,0 +1,44 @@
+.card-primary {
+  padding: 0;
+  align-items: center;
+}
+
+.about-event {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.primary-contact {
+  width: 60%;
+  text-align: center;
+  padding: 20px;
+  line-height: 30px;
+}
+
+@media (min-width: 768px) {
+  .section-primary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .motto-quot {
+    display: none;
+  }
+
+  .card-primary {
+    padding-top: 40px;
+    width: 50%;
+  }
+
+  .about-event {
+    width: 60%;
+  }
+
+  .primary-contact {
+    width: 50%;
+  }
+}
