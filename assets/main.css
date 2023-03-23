@@ -31,7 +31,7 @@ header {
 }
 
 .list-primary {
-  padding-left: 60px;
+  padding-left: calc(min(60px, 6%));
 }
 
 .section-primary {
@@ -42,7 +42,7 @@ header {
 }
 
 .card-primary {
-  padding: 80px 0;
+  padding: calc(min(80px, 10%)) 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,7 +90,7 @@ header {
 }
 
 .navbar-advert {
-  padding: 0 120px;
+  padding: 0 calc(min(120px, 5%));
   background-color: var(--dark);
   text-align: end;
 }
@@ -105,16 +105,16 @@ header {
   padding: 5px;
 }
 
+.link-advert {
+  font-size: 13px;
+  font-weight: 100;
+  color: white;
+  padding: 10px;
+}
+
 .image-advert {
   max-width: 1.25rem;
   max-height: 1.25rem;
-}
-
-.link-advert {
-  color: white;
-  padding: 10px;
-  font-size: 13px;
-  font-weight: 100;
 }
 
 .list-about {
@@ -131,7 +131,7 @@ header {
   }
 
   .align-section {
-    padding: 35px;
+    padding: 0 calc(min(35px, 5%));
   }
 
   .navbar-primary {
@@ -139,7 +139,7 @@ header {
   }
 
   .humberger-container {
-    padding-top: 200px;
+    padding-top: 0;
   }
 
   .humbergur-link {
@@ -234,11 +234,6 @@ header {
     font-weight: 900;
   }
 
-  .popup-menu .navbar-primary #popup-closeid:hover {
-    background-color: #fff9ff;
-    opacity: 0.5;
-  }
-
   .popup-menu > header > .navbar-primary {
     order: -1;
     display: block;
@@ -249,6 +244,11 @@ header {
     display: flex;
     justify-content: space-between;
     border-bottom: 0.5px solid var(--warn);
+  }
+
+  .popup-menu > header > .navbar-primary #popup-closeid:hover {
+    background-color: #fff9ff;
+    opacity: 0.5;
   }
 
   .popup-menu > header .order-primary {
@@ -281,7 +281,7 @@ header {
 
 @media (min-width: 768px) {
   .align-section {
-    padding: 0 100px;
+    padding: 0 calc(min(100px, 5%));
   }
 
   .desktop-only {
