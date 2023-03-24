@@ -1,50 +1,79 @@
 const domelement = document.querySelector('#featurespeakerid');
 const data = [
-  { name: 'DR Gemmechu Megersa ', profile: 'drgemechu.webp', message: 'e' },
-  { name: 'DR Gutu Tesso ', profile: 'gututesso.webp', message: 'a' },
-  { name: 'Mr DinKu Deyassa ', profile: 'dinku.jpg', message: 'f' },
-  { name: 'Mr Kilnam Chon ', profile: 'b1.png', message: 'g' },
-  { name: 'Mrs Julia Leda ', profile: 'b2.png', message: 'c' },
-  { name: 'Mrs Lila Tretikov ', profile: 'b3.png', message: 'b' },
-  { name: 'Mr Yochai Benkler ', profile: '2.jpg', message: 'e' },
-  { name: 'Mr Ryan Merkley ', profile: '1.jpg', message: 'd' },
+  {
+    id: 1,
+    name: 'Gemmechu Megersa (PHD)',
+    profile: 'b4.webp',
+    title: 'Head Director Erriecha ',
+  },
+  {
+    id: 2,
+    name: 'Gutu Tesso (PHD)',
+    profile: 'b3.png',
+    title: 'DRM Specialist Political Economy Guru;',
+  },
+  {
+    id: 3,
+    name: 'DinKu Deyassa ',
+    profile: '1.jpg',
+    title: 'Abba Dula of Erriecha',
+  },
+  {
+    id: 4,
+    name: 'Kilnam Chon ',
+    profile: 'b1.png',
+    title: 'Professor Directors',
+  },
+  {
+    id: 5,
+    name: 'Julia Leda ',
+    profile: 'b2.png',
+    title: 'Director Of Erriecha Forum',
+  },
+  {
+    id: 6,
+    name: 'Lila Tretikov ',
+    profile: '4.jpg',
+    title: 'Director of Workshop',
+  },
+  {
+    id: 7,
+    name: 'Yochai Benkler ',
+    profile: '2.jpg',
+    title: 'General Director of Follie',
+  },
+  {
+    id: 8,
+    name: 'Ryan Merkley ',
+    profile: '7.jpg',
+    title: 'Hadha Sinqe Of Erriecha',
+  },
 ];
 
-const messages = {
-  a: 'DRM Specialist; Keynote Speaker, Political Economy Guru; Economic Empowerment Lecturer',
-  b: 'Currently working as a Senior Advisor to the government of Ethiopia on Disaster Risk Management by being appointed as a consultant by European Union through DT-Global',
-  c: 'Management by being appointed as a consultant by European Union through DT-Global',
-  d: 'Management by being appointed as a consultant by European Union through DT-Global',
-  e: 'Dr Gemechu is a well known Oromo scholar and author on culture, politics and history of the Oromo people.',
-  f: "He co-authored the book 'Sacred Knowledge Traditions of the Oromo of the Horn of Africa' with his wife Dr Aneesa Kassam.",
-  g: "He co-authored the book 'Sacred Knowledge Traditions of the Oromo of the Horn of Africa' with his wife Dr Aneesa Kassam.",
-  h: 'This is sample. Management by being appointed as a consultant by European Union through DT-Global',
-  i: 'Management by being appointed as a consultant by European Union through DT-Global',
-};
+const messages = [
+  'He co-authored the book Sacred Knowledge Traditions of the Oromo of the Horn of Africa',
+  'Sacred Knowledge Traditions of the Oromo of the Horn of Africa',
+  'Management by being appointed as a consultant by European Union through DT-Global',
+  'Management by being appointed as a consultant by European Union through DT-Global',
+  'Dr Gemechu is a well known Oromo scholar and author on culture, politics and history of the Oromo people.',
+  "He co-authored the book Sacred Knowledge Traditions of the Oromo of the Horn of Africa's with his wife Dr Aneesa Kassam.",
+  "He co-authored the book 'Sacred Knowledge Traditions of the Oromo of the Horn of Africa' with his wife Dr Aneesa Kassam.",
+  'This is sample. Management by being appointed as a consultant by European Union through DT-Global',
+  'Management by being appointed as a consultant by European Union through DT-Global',
+];
 
-function createstrong(name) {
-  const str = document.createElement('strong');
-  str.innerHTML = `${name}<br>`;
-  return str;
-}
-function createspan(text, cname) {
-  const span = document.createElement('span');
-  span.className = cname;
-  span.textContent = text;
-  return span;
-}
-
-function createprofile(path, cname) {
+function createimages(path) {
   const imagelement = document.createElement('img');
-  imagelement.className = cname;
+  imagelement.className = 'speaker-image';
   imagelement.src = `./assets/images/speaker/${path}`;
   imagelement.alt = 'profile image';
   return imagelement;
 }
 
-function createparagraph(cname) {
+function createparagraph(text, cname) {
   const p = document.createElement('p');
   p.className = cname;
+  p.textContent = text;
   return p;
 }
 
@@ -54,28 +83,27 @@ function createcontainer(cname) {
   return divcontainer;
 }
 
-function feature(name = '', path = '', key = 'a') {
-  let message = messages[key];
-  let text = '';
-  if (message.length > 100) {
-    text = message.substring(100);
-    message = message.substring(0, 100);
-  }
-  const feature = createcontainer('speaker-feature');
-  const container = createcontainer('speaker-photo');
-  const paragraph = createparagraph('person-message');
-  const profile = createprofile(path, 'person-photo');
-  const image = createprofile('backimage.jpg', 'bg-cover');
-  const title = createstrong(name);
-  const span1 = createspan(message, '');
-  const span2 = createspan(text, 'desktop-only');
-  paragraph.append(title, span1, span2);
-  container.append(image, profile);
-  feature.append(container, paragraph);
-  domelement.append(feature);
-  //   console.log(name, path);
+function createfeature(id, name, title, path) {
+  const message = messages[id] ?? '---------';
+  const profile = createcontainer('speaker-profile');
+  const container = createcontainer('container-image');
+  const images = createimages(path);
+  container.append(images);
+  profile.append(container);
+  const information = createcontainer('speaker-info');
+  const ptitle = createparagraph(title, 'speaker-title');
+  const pname = createparagraph(name, 'speaker-name');
+  const pmessage = createparagraph(message, 'speaker-message');
+  information.append(pname, ptitle, pmessage);
+  domelement.append(profile, information);
 }
 
 data.forEach((element) => {
-  feature(element.name, element.profile, element.message);
+  const newdata = {
+    id: element.id ?? 0,
+    name: element.name ?? '---',
+    title: element.title ?? '----',
+    path: element.profile ?? 'backimage.jpg',
+  };
+  createfeature(newdata.id, newdata.name, newdata.title, newdata.path);
 });

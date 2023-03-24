@@ -83,7 +83,8 @@ After one month training.
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-[Live](https://osmanwako.github.io/Erriechafestival/)
+[Live](https://osmanwako.github.io/Project-Erriecha/)
+<!-- project loom video https://www.loom.com/share/c3e272ceea414a4a812fbd7269f02bb2 -->
 
 <!-- GETTING STARTED -->
 
