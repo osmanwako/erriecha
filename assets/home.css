@@ -215,13 +215,14 @@
   }
 
   .program-seemore {
-    text-align: center;
+    display: flex;
     text-decoration: underline;
     width: 100%;
     padding: 40px;
     color: #fff;
     font-size: 1.25rem;
     font-weight: 300;
+    justify-content: center;
   }
 
   .speaker-container {
