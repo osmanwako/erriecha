@@ -86,7 +86,7 @@ After one month training.
 
 [Live](https://osmanwako.github.io/Project-Erriecha/)
 
-[highlight video] (https://www.loom.com/share/681ca5446bb54aa095d0388a3b2cdf07)
+[highlight video](https://www.loom.com/share/9127bc2e12ee4f4482c4f298818f8083)
 
 <!-- GETTING STARTED -->
 
