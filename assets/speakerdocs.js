@@ -101,7 +101,7 @@ function createfeature(id, name, title, path) {
 data.forEach((element) => {
   const newdata = {
     id: element.id ?? 0,
-    name: element.name ?? '---',
+    name: element.name ?? 'No Name Here',
     title: element.title ?? '----',
     path: element.profile ?? 'backimage.jpg',
   };
