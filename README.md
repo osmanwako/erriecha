@@ -84,7 +84,7 @@ After one month training.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live](https://osmanwako.github.io/Project-Erriecha/)
+[Live](https://osmanwako.github.io/erriecha/)
 
 [highlight video](https://www.loom.com/share/9127bc2e12ee4f4482c4f298818f8083)
 
@@ -95,7 +95,7 @@ After one month training.
 Clone this repository to your desired folder:
 
 ```
-git clone https://github.com/osmanwako/Erriechafestival.git
+git clone https://github.com/osmanwako/erriecha.git
 ```
 ### Prerequisites
 
@@ -108,7 +108,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-git clone git clone https://github.com/osmanwako/Erriechafestival.git
+git clone git clone https://github.com/osmanwako/erriecha.git
 
 cd Erriechafestival
 ### Install
@@ -130,7 +130,7 @@ npm install
 👤 **Author1**
 
 - GitHub: [@Osmanwako](https://github.com/osmanwako)
-- LinkedIn: [Osmanwako](https://www.linkedin.com/in/osman-wako-08663825a/)
+- LinkedIn: [Osmanwako](https://www.linkedin.com/in/osmanwako/)
      
 <!-- FUTURE FEATURES -->
 
